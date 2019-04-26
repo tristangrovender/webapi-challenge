@@ -53,6 +53,19 @@ router.post("/", (req, res) => {
       });
   });
 
+  router.get("/:id", (req, res) => {
+    const { id } = req.params;
+    db.getProjectActions(id)
+      .then(actions => {
+        res.status(200).json(actions);
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: "The project's actions could not be retrieved." });
+      });
+  });
+
 // Update
   router.put("/:id", (req, res) => {
     const { id } = req.params;
