@@ -26,13 +26,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+1. We learned about express router which helps us group up similar endpoints for resources.
+2. We learned that most things in express are middleware, express is to node as react is to js, modules in express are basically the same as components in react.
+
 - [ ] Describe Middleware?
+
+Middleware are small functions that provide a way to modify/extend parts of our app asynchronously. 
 
 - [ ] Describe a Resource?
 
+Something that we are providing to the client, in this project that would be actions and projects.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+The api can return an res.status such as 200(success)
+
 - [ ] How can we partition our application into sub-applications?
+
+We can do this by using router to put a particular grouping of endpoints into one file and another group in a different file/folder.
 
 ## Project Setup
 
